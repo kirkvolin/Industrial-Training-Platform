@@ -50,10 +50,10 @@ This system is a **complete automated production cell** that sorts colored cubes
   │   Feed   │    │ Pick &   │    │  Robot   │    │  Sensor  │    │ Sorting  │    │  Pallet  │
   │          │    │  Place   │    │ Transfer │    │  ID      │    │  Robot   │    │  Mgmt    │
   └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
-   Pneumatic       Vacuum          Epson SCARA     QCM50 Color     UR3 Cobot       Cognex Vision
-   Dispenser       End Effector    SPEL+ AOIs      4 Discrete      Sort/Reject     + UR3 Cobot
-   Diffuse PE      Multi-Axis      Queue Conv      Red/White       Rotary Table    Pallet Swap
-   Sensor          Actuation       ID Conveyor     Blue/Black      Reject Conv     In/Out Conv
+   Pneumatic       Vacuum          Epson SCARA     QCM50 Color     UR3 Cobot       UR3 Cobot
+   Dispenser       End Effector    SPEL+ AOIs      4 Discrete      Sort/Reject     Pallet Swap
+   Diffuse PE      Multi-Axis      Queue Conv      Red/White       Rotary Table    In/Out Conv
+   Sensor          Actuation       ID Conveyor     Blue/Black      Reject Conv     
 ```
 
 ### Station Descriptions

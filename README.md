@@ -1,6 +1,6 @@
 # Modular Sorting and Palletizing System
 
-> A multi-station industrial automation cell integrating PLCs, collaborative and industrial robotics, machine vision, pneumatics, and SCADA — designed, programmed, and commissioned as a modular learning platform for industrial automation education.
+> A multi-station industrial automation cell integrating PLCs, collaborative and industrial robotics, machine vision, pneumatics, and SCADA - designed, programmed, and commissioned as a modular learning platform for industrial automation education.
 
 ---
 
@@ -10,13 +10,13 @@ I served as the **controls and robotics engineer** on this project, and my respo
 
 ### PLC Programming & System Orchestration
 - Designed and implemented the **complete PLC control system** on Allen-Bradley CompactLogix using Studio 5000
-- Architected a **state machine** to orchestrate all stations — cube dispensing, robotic pick-and-place, color inspection, sorting, palletizing, and pallet exchange — as a single coordinated production cell
+- Architected a **state machine** to orchestrate all stations - cube dispensing, robotic pick-and-place, color inspection, sorting, palletizing, and pallet exchange - as a single coordinated production cell
 - Developed **fault handling and recovery logic** including timeout watchdogs, sensor validation, and safe state transitions to ensure consistent, repeatable operation
 - Implemented **recipe management logic** allowing operators to dynamically assign color mappings through the HMI without modifying PLC code
 
 ### Robot Programming & Integration
 - Programmed **Epson SCARA robot** using SPEL+ for high-speed cube transfer from a queue conveyor to the identification conveyor with precise color sensor presentation positioning
-- Integrated **two Universal Robots UR3 collaborative robots** — one for color-based sorting to pallets or reject conveyor, and one for vision-triggered pallet exchange between rotary table, input conveyor, and exit conveyor
+- Integrated **two Universal Robots UR3 collaborative robots** - one for color-based sorting to pallets or reject conveyor, and one for vision-triggered pallet exchange between rotary table, input conveyor, and exit conveyor
 - Designed the **robot-PLC handshaking architecture** for all three robots, managing busy/done signaling, command sequencing, and fault pass-through across vendor boundaries
 
 ### Sensor Integration & Extended I/O
@@ -58,23 +58,23 @@ This system is a **complete automated production cell** that sorts colored cubes
 
 ### Station Descriptions
 
-**Station 1 — Cube Dispensing:**
+**Station 1 - Cube Dispensing:**
 A pneumatic cylinder pushes cubes one at a time from a gravity-fed dispenser. A diffuse photoelectric sensor confirms a cube is in position and ready for pickup.
 
-**Station 2 — Pneumatic Pick & Place:**
+**Station 2 - Pneumatic Pick & Place:**
 A multi-axis pneumatic actuator with a vacuum suction end effector picks cubes from the feed station and places them on a queue conveyor for robotic handling.
 
-**Station 3 — SCARA Robot Transfer:**
+**Station 3 - SCARA Robot Transfer:**
 An Epson SCARA robot picks cubes from the queue conveyor and presents them to the color sensor on an identification conveyor. 
 
-**Station 4 — Color Identification:**
+**Station 4 - Color Identification:**
 A Banner QCM50 color sensor identifies each cube as red, white, blue, or black. The PLC decodes the four discrete sensor outputs and determines the cube's destination based on the active recipe. Black cubes are always classified as rejects.
 
-**Station 5 — UR3 Sorting:**
+**Station 5 - UR3 Sorting:**
 A UR3 collaborative robot picks cubes from the identification conveyor and places them either on a pallet (positioned on a rotary table) or on a reject conveyor, based on the color classification.
 
-**Station 6 — Vision-Based Pallet Management:**
-A machine vision system monitors pallets on the rotary table for fill status. When a full pallet is detected, a second UR3 removes it to an exit conveyor and loads an empty pallet from an input conveyor — all without operator intervention.
+**Station 6 - Vision-Based Pallet Management:**
+A machine vision system monitors pallets on the rotary table for fill status. When a full pallet is detected, a second UR3 removes it to an exit conveyor and loads an empty pallet from an input conveyor - all without operator intervention.
 
 ---
 
@@ -104,7 +104,7 @@ The system includes comprehensive fault detection and recovery:
 - **Color sensor validation** (no-match detection)
 - **Robot fault pass-through** from all three robots to PLC
 - **Conveyor feedback monitoring** (commanded vs. actual)
-- **Safe state transitions** — all motion stops on fault, operator reset required
+- **Safe state transitions** - all motion stops on fault, operator reset required
 
 ---
 
@@ -118,8 +118,8 @@ This platform integrates a wide array of industrial systems and components:
 - State machine design
 
 ### Robotics
-- Epson SCARA robot — SPEL+ programming, 7 custom AOIs
-- Universal Robots UR3 (×2) — sorting and pallet handling
+- Epson SCARA robot - SPEL+ programming, 7 custom AOIs
+- Universal Robots UR3 (×2) - sorting and pallet handling
 - Robot-PLC handshaking across multiple vendors
 
 ### Sensors
@@ -174,7 +174,7 @@ This platform integrates a wide array of industrial systems and components:
 
 This system was designed as a **modular learning platform** for students entering the industrial automation field. It provides hands-on experience with the same equipment, protocols, and programming tools used in professional manufacturing environments.
 
-The breadth of integrated technologies — spanning PLCs, three robots across two vendors, machine vision, pneumatics, multiple sensor types, conveyors, and SCADA — gives students real-world exposure to the complexity of modern automated systems and the integration challenges that come with multi-vendor, multi-protocol production cells.
+The breadth of integrated technologies - spanning PLCs, three robots across two vendors, machine vision, pneumatics, multiple sensor types, conveyors, and SCADA - gives students real-world exposure to the complexity of modern automated systems and the integration challenges that come with multi-vendor, multi-protocol production cells.
 
 Every component in this system is an industrial-grade product used in actual manufacturing facilities, ensuring that skills developed on this platform transfer directly to professional automation engineering roles.
 
